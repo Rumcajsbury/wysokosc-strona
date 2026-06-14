@@ -151,18 +151,24 @@ nav ul li a.active {
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center; /* To centruje elementy w nienapełnionych rzędach */
 }
 
 .service-card {
-  background: #fff;
-  padding: 40px;
-  text-align: center;
+  background: #ffffff;
+  border: 1px solid #eef2f3;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Definiujemy elastyczną szerokość kafelka */
+  flex: 1 1 280px;    /* Rosną i kurczą się, ale bazowo mają 280px */
+  max-width: 380px;   /* Blokada, żeby kafelki nie rozciągnęły się za bardzo na wielkich ekranach */
 }
 
 .service-card:hover {
@@ -216,6 +222,254 @@ footer ul li a {
   text-align: center;
   padding: 20px 0;
   font-size: 0.8rem;
+}
+
+/* Stylizacja sekcji certyfikatów */
+.certificates-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.certificates-section h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-desc {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Siatka układająca certyfikaty obok siebie */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Pojedynczy element certyfikatu */
+.certificate-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.certificate-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Wrapper na zdjęcie, żeby zachować równe proporcje */
+.img-wrapper {
+  width: 100%;
+  height: 350px; /* wysokość dopasuj do swoich skanów */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* sprawi, że skan nie będzie rozciągnięty */
+}
+
+/* Podpis pod certyfikatem */
+.certificate-caption {
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Sekcja Realizacji */
+.portfolio-section {
+  padding: 50px 20px;
+}
+
+.portfolio-section h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.portfolio-section .section-desc {
+  text-align: center;
+  color: #7f8c8d;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+}
+
+/* Siatka dla realizacji (3 kolumny na dużym ekranie, 2 na tablecie, 1 na telefonie) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Karta pojedynczego projektu */
+.portfolio-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef2f3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Kontener na zdjęcie */
+.portfolio-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #eceff1;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-img img {
+  transform: scale(1.05);
+}
+
+/* Informacje o projekcie */
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #f39c12; /* kolor akcentu np. żółty/pomarańczowy budowlany */
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.portfolio-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Napis "oraz wiele innych..." */
+.portfolio-footer {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px dashed #bdc3c7;
+}
+
+/* Sekcja Oferty */
+.services-section {
+  padding: 50px 20px;
+}
+
+.services-section h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.services-section .section-desc {
+  text-align: center;
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Pojedynczy kafelek usługi */
+.services-item {
+  background: #ffffff;
+  border: 1px solid #eef2f3;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #f39c12; /* Akcent np. żółty/pomarańczowy kolor budowlany */
+}
+
+/* Stylizacja ikony */
+.services-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* Tytuł usługi w kafelku */
+.services-item h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+/* Opis usługi */
+.services-item p {
+  margin: 0;
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.services-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #f39c12; /* Budowlany pomarańcz/żółć */
+  color: #fff;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #d35400; /* Ciemniejszy odcień przy najechaniu */
 }
 
 /* Responsive */
