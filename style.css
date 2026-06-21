@@ -12,9 +12,9 @@ body {
   background-color: #f9f9f9;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .container {
@@ -164,11 +164,13 @@ nav ul li a.active {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
   /* Definiujemy elastyczną szerokość kafelka */
-  flex: 1 1 280px;    /* Rosną i kurczą się, ale bazowo mają 280px */
-  max-width: 380px;   /* Blokada, żeby kafelki nie rozciągnęły się za bardzo na wielkich ekranach */
+  flex: 1 1 280px; /* Rosną i kurczą się, ale bazowo mają 280px */
+  max-width: 380px; /* Blokada, żeby kafelki nie rozciągnęły się za bardzo na wielkich ekranach */
 }
 
 .service-card:hover {
@@ -240,51 +242,54 @@ footer ul li a {
   margin-bottom: 40px;
 }
 
-/* Siatka układająca certyfikaty obok siebie */
+/* Kontener siatki certyfikatów */
 .certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-content: center;
-}
-
-/* Pojedynczy element certyfikatu */
-.certificate-item {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.certificate-item:hover {
-  transform: translateY(-5px);
-}
-
-/* Wrapper na zdjęcie, żeby zachować równe proporcje */
-.img-wrapper {
-  width: 100%;
-  height: 350px; /* wysokość dopasuj do swoich skanów */
-  overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centruje ostatnie elementy w rzędzie */
+  margin-top: 30px;
+}
+
+/* Nowy wygląd kafelka bez zdjęcia */
+.document-card {
+  background: #fff;
+  border: 1px solid #eef2f3;
+  border-radius: 8px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  /* KLUCZOWA ZMIANA TUTAJ: */
+  flex: 0 0 260px; /* Nie rośnij (0), nie kurcz się (0), miej dokładnie 260px szerokości */
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 15px;
 }
 
-.img-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* sprawi, że skan nie będzie rozciągnięty */
+.document-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-color: #f39c12;
 }
 
-/* Podpis pod certyfikatem */
+/* Styl ikony w kafelku */
+.cert-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Tekst certyfikatu */
 .certificate-caption {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
-  color: #444;
+  color: #333;
   margin: 0;
   line-height: 1.4;
 }
@@ -324,7 +329,9 @@ footer ul li a {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #eef2f3;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .portfolio-item:hover {
@@ -412,7 +419,9 @@ footer ul li a {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .services-item:hover {
