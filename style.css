@@ -55,12 +55,11 @@ header {
 
 .flex-header .logo-link {
   height: 100%;
-  max-height: 120px; /* To trzymało wysokość Twojego logo */
-  display: flex; /* Wyrównuje obrazek wewnątrz linku */
+  max-height: 120px;
+  display: flex;
   align-items: center;
 }
 
-/* Obrazek wewnątrz linku po prostu dopasowuje się do jego wymiarów */
 .flex-header .logo-link img {
   height: 100%;
   width: auto;
@@ -82,40 +81,89 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  font-weight: 500; /* Opcjonalnie: delikatne pogrubienie tekstu */
+  font-weight: 500;
   color: #e67e22;
 }
 
-/* Hero Section */
+/* --- ZAKTUALIZOWANA SEKCJA HERO --- */
 .hero {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://images.unsplash.com/photo-1517089535811-6677936a297a?q=80&w=2000&auto=format&fit=crop");
-  background-size: cover;
-  background-position: center;
-  height: 500px;
+  position: relative;
+  height: 85vh; /* Wyższa sekcja - zajmuje 85% wysokości ekranu */
+  min-height: 600px; /* Bezpieczny próg minimalny */
   display: flex;
   align-items: center;
-  color: #fff;
-  text-align: left;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Kontener na całą karuzelę */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Pojedynczy slajd tła */
+.hero-slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Aktywny slajd */
+.hero-slider .slide.active {
+  opacity: 1;
+}
+
+/* Zmniejszone przyciemnienie - tylko 25% czerni dla lepszej widoczności zdjęć */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); 
+  z-index: 2;
+}
+
+/* Wyniesienie tekstu ponad karuzelę i nakładkę */
+.hero .container {
+  position: relative;
+  z-index: 3;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 700px;
+  padding: 40px 20px;
 }
 
+/* Dodany cień tekstu dla idealnej czytelności na jaśniejszym tle */
 .hero-content h2 {
   font-size: 3rem;
   margin-bottom: 20px;
   line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .btn {
+  display: inline-block;
   background: #e67e22;
   color: #fff;
   padding: 12px 30px;
@@ -154,7 +202,7 @@ nav ul li a.active {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  justify-content: center; /* To centruje elementy w nienapełnionych rzędach */
+  justify-content: center;
 }
 
 .service-card {
@@ -164,13 +212,9 @@ nav ul li a.active {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-
-  /* Definiujemy elastyczną szerokość kafelka */
-  flex: 1 1 280px; /* Rosną i kurczą się, ale bazowo mają 280px */
-  max-width: 380px; /* Blokada, żeby kafelki nie rozciągnęły się za bardzo na wielkich ekranach */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 280px;
+  max-width: 380px;
 }
 
 .service-card:hover {
@@ -226,7 +270,7 @@ footer ul li a {
   font-size: 0.8rem;
 }
 
-/* Stylizacja sekcji certyfikatów */
+/* Certyfikaty */
 .certificates-section {
   padding: 40px 20px;
   text-align: center;
@@ -242,16 +286,14 @@ footer ul li a {
   margin-bottom: 40px;
 }
 
-/* Kontener siatki certyfikatów */
 .certificates-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center; /* Centruje ostatnie elementy w rzędzie */
+  justify-content: center;
   margin-top: 30px;
 }
 
-/* Nowy wygląd kafelka bez zdjęcia */
 .document-card {
   background: #fff;
   border: 1px solid #eef2f3;
@@ -259,14 +301,8 @@ footer ul li a {
   padding: 25px 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-
-  /* KLUCZOWA ZMIANA TUTAJ: */
-  flex: 0 0 260px; /* Nie rośnij (0), nie kurcz się (0), miej dokładnie 260px szerokości */
-
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  flex: 0 0 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,13 +315,11 @@ footer ul li a {
   border-color: #f39c12;
 }
 
-/* Styl ikony w kafelku */
 .cert-icon {
   font-size: 2rem;
   margin-bottom: 12px;
 }
 
-/* Tekst certyfikatu */
 .certificate-caption {
   font-size: 16px;
   font-weight: bold;
@@ -294,7 +328,7 @@ footer ul li a {
   line-height: 1.4;
 }
 
-/* Sekcja Realizacji */
+/* Realizacje */
 .portfolio-section {
   padding: 50px 20px;
 }
@@ -314,7 +348,6 @@ footer ul li a {
   font-size: 1.1rem;
 }
 
-/* Siatka dla realizacji (3 kolumny na dużym ekranie, 2 na tablecie, 1 na telefonie) */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -322,16 +355,13 @@ footer ul li a {
   margin-bottom: 40px;
 }
 
-/* Karta pojedynczego projektu */
 .portfolio-item {
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #eef2f3;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-item:hover {
@@ -339,7 +369,6 @@ footer ul li a {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Kontener na zdjęcie */
 .portfolio-img {
   width: 100%;
   height: 220px;
@@ -358,7 +387,6 @@ footer ul li a {
   transform: scale(1.05);
 }
 
-/* Informacje o projekcie */
 .portfolio-info {
   padding: 20px;
 }
@@ -367,7 +395,7 @@ footer ul li a {
   margin: 0 0 10px 0;
   font-size: 1.25rem;
   color: #2c3e50;
-  border-bottom: 2px solid #f39c12; /* kolor akcentu np. żółty/pomarańczowy budowlany */
+  border-bottom: 2px solid #f39c12;
   padding-bottom: 5px;
   display: inline-block;
 }
@@ -379,7 +407,6 @@ footer ul li a {
   line-height: 1.5;
 }
 
-/* Napis "oraz wiele innych..." */
 .portfolio-footer {
   text-align: center;
   font-style: italic;
@@ -390,7 +417,7 @@ footer ul li a {
   border-top: 1px dashed #bdc3c7;
 }
 
-/* Sekcja Oferty */
+/* Oferta */
 .services-section {
   padding: 50px 20px;
 }
@@ -411,7 +438,6 @@ footer ul li a {
   line-height: 1.6;
 }
 
-/* Pojedynczy kafelek usługi */
 .services-item {
   background: #ffffff;
   border: 1px solid #eef2f3;
@@ -419,32 +445,27 @@ footer ul li a {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border-color: #f39c12; /* Akcent np. żółty/pomarańczowy kolor budowlany */
+  border-color: #f39c12;
 }
 
-/* Stylizacja ikony */
 .services-icon {
   font-size: 2.5rem;
   margin-bottom: 15px;
   display: inline-block;
 }
 
-/* Tytuł usługi w kafelku */
 .services-item h3 {
   margin: 0 0 12px 0;
   font-size: 1.3rem;
   color: #2c3e50;
 }
 
-/* Opis usługi */
 .services-item p {
   margin: 0;
   color: #555555;
@@ -467,7 +488,7 @@ footer ul li a {
 
 .btn-primary {
   display: inline-block;
-  background-color: #f39c12; /* Budowlany pomarańcz/żółć */
+  background-color: #f39c12;
   color: #fff;
   padding: 12px 30px;
   text-transform: uppercase;
@@ -478,7 +499,7 @@ footer ul li a {
 }
 
 .btn-primary:hover {
-  background-color: #d35400; /* Ciemniejszy odcień przy najechaniu */
+  background-color: #d35400;
 }
 
 /* Responsive */
@@ -486,6 +507,9 @@ footer ul li a {
   .flex-header {
     flex-direction: column;
     gap: 15px;
+  }
+  .hero {
+    height: 60vh; /* Na komórkach nieco niższa, by nie zasłaniać całego małego ekranu */
   }
   .hero-content h2 {
     font-size: 2rem;

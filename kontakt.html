@@ -35,13 +35,17 @@
       </div>
     </header>
 
-    <section class="hero">
+     <section class="hero">
+      <div class="hero-slider">
+        <div class="slide active" style="background-image: url('media/hero-1.jpg');"></div>
+        <div class="slide" style="background-image: url('media/hero-2.jpg');"></div>
+        <div class="slide" style="background-image: url('media/hero-3.jpg');"></div>
+      </div>
+      
       <div class="container">
         <div class="hero-content">
-          <div>
-            <h2 >Skontaktuj się z nami</h2>
-
-            <p>
+          <h2>Skontaktuj się z nami</h2>
+        <p>
               Jeśli są Państwo zainteresowani naszymi usługami to zapraszamy do
               kontaktu i współpracy z naszą firmą ROTHER.
             </p>
@@ -86,5 +90,26 @@
         <p>&copy; 2026 ROTHER. Wszelkie prawa zastrzeżone.</p>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".hero-slider .slide");
+        let currentSlide = 0;
+
+        function nextSlide() {
+          // Usuń klasę active z obecnego slajdu
+          slides[currentSlide].classList.remove("active");
+          
+          // Przejdź do kolejnego slajdu (lub wróć do pierwszego)
+          currentSlide = (currentSlide + 1) % slides.length;
+          
+          // Dodaj klasę active do nowego slajdu
+          slides[currentSlide].classList.add("active");
+        }
+
+        // Uruchamiaj funkcję co 5000 milisekund (5 sekund)
+        setInterval(nextSlide, 5000);
+      });
+    </script>
   </body>
 </html>
