@@ -54,16 +54,16 @@ header {
 }
 
 .flex-header .logo-link {
-  height: 100%;
-  max-height: 120px;
   display: flex;
   align-items: center;
+  height: 100%; /* Utrzymuje pełną wysokość rodzica dla wyśrodkowania */
 }
 
 .flex-header .logo-link img {
-  height: 100%;
+  height: auto;
+  max-height: 75px; /* Kontroluje optymalny rozmiar logo */
   width: auto;
-  object-fit: contain;
+  display: block;
 }
 
 nav ul {
