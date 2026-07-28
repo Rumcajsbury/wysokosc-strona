@@ -127,13 +127,13 @@ nav ul li a.active {
 
 /* Zmniejszone przyciemnienie - tylko 25% czerni dla lepszej widoczności zdjęć */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25); 
+  background: rgba(0, 0, 0, 0.25);
   z-index: 2;
 }
 
@@ -212,7 +212,9 @@ nav ul li a.active {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   flex: 1 1 280px;
   max-width: 380px;
 }
@@ -301,7 +303,10 @@ footer ul li a {
   padding: 25px 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
   flex: 0 0 260px;
   display: flex;
   flex-direction: column;
@@ -361,7 +366,9 @@ footer ul li a {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #eef2f3;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .portfolio-item:hover {
@@ -445,7 +452,9 @@ footer ul li a {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .services-item:hover {
@@ -500,6 +509,13 @@ footer ul li a {
 
 .btn-primary:hover {
   background-color: #d35400;
+}
+
+.services-icon img {
+  width: 40px; /* Dostosuj szerokość do wysokości pozostałych ikonek */
+  height: 40px; /* Dopasuj wysokość */
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 /* Responsive */
