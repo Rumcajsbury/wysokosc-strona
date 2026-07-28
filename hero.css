@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  height: 85vh; /* Wyższa sekcja - zajmuje 85% wysokości ekranu */
+  min-height: 600px; /* Bezpieczny próg minimalny */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Kontener na całą karuzelę */
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Pojedynczy slajd tła */
+.hero-slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Aktywny slajd */
+.hero-slider .slide.active {
+  opacity: 1;
+}
+
+/* Zmniejszone przyciemnienie - tylko 25% czerni dla lepszej widoczności zdjęć */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+/* Wyniesienie tekstu ponad karuzelę i nakładkę */
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 40px 20px;
+}
+
+/* Dodany cień tekstu dla idealnej czytelności na jaśniejszym tle */
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
