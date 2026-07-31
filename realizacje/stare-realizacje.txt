@@ -1,0 +1,164 @@
+  <!--
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="./media/certyfikat-1.jpeg"
+              alt="Malowanie zbiornika na płyny do odladzania samolotów lotnisko Radom"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Lotnisko Radom</h3>
+            <p>Malowanie zbiornika na płyny do odladzania samolotów.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/black-hawk.jpg"
+              alt="Malowanie konstrukcji suwnicy na hali Black Hawk w Mielcu"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Hala Black Hawk, Mielec</h3>
+            <p>Malowanie konstrukcji suwnicy na hali produkcyjnej.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/lotnisko-mielec.jpg"
+              alt="Malowanie hali lotniska w Mielcu"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Hala Lotniska, Mielec</h3>
+            <p>
+              Kompleksowe malowanie obiektów aeroklubowych / hal lotniskowych.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/pogotowie-rzeszow.jpg"
+              alt="Malowanie elewacji budynku Wojewódzkiej Stacji Pogotowia Ratunkowego w Rzeszowie"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>WSPR Rzeszów</h3>
+            <p>
+              Malowanie elewacji budynku Wojewódzkiej Stacji Pogotowia
+              Ratunkowego.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/remondis.jpg"
+              alt="Malowanie komina oraz budynków spalarni medycznej Remondis w Rzeszowie"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Remondis, Rzeszów</h3>
+            <p>
+              Specjalistyczne malowanie komina oraz budynków spalarni medycznej.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/meble-pl.jpg"
+              alt="Malowanie pomieszczeń Meble pl. w Rzeszowie"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Meble.pl, Rzeszów</h3>
+            <p>Malowanie obiektów i pomieszczeń firmowych.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/pge-rzeszow.jpg"
+              alt="Montaż osiatkowania na zsypach odpadów w spalarni PGE Rzeszów"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Spalarnia PGE Rzeszów</h3>
+            <p>Montaż osiatkowania zabezpieczającego na zsypach odpadów.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/flypark.jpg"
+              alt="Malowanie dla Flypark Radlin, Rzeszów"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Flypark Radlin, Rzeszów</h3>
+            <p>Prace malarskie na obiektach rekreacyjno-sportowych.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/grodzek.jpg"
+              alt="Malowanie wieży kościoła w Gródku nad Dunajcem"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Gródek nad Dunajcem</h3>
+            <p>Malowanie wieży kościoła przy użyciu podnośników koszowych.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/brzozowa-kosciol.jpg"
+              alt="Renowacja zabytkowego kościoła w Brzozowej, powiat tarnowski"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Brzozowa (pow. tarnowski)</h3>
+            <p>Renowacja zabytkowego obiektu sakralnego.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/brzozowa-krzyz.jpg"
+              alt="Naprawa krzyża na wieży kościoła w Brzozowej"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Kościół w Brzozowej</h3>
+            <p>Precyzyjna naprawa krzyża na szczycie wieży kościoła.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img">
+            <img
+              src="media/realizacje/lososina.jpg"
+              alt="Renowacja dachu na sklepie Bonus w Łososinie Dolnej"
+            />
+          </div>
+          <div class="portfolio-info">
+            <h3>Łososina Dolna</h3>
+            <p>Renowacja i malowanie dachu na budynku handlowym "Bonus".</p>
+          </div>
+ -->
