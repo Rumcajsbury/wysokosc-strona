@@ -31,9 +31,12 @@
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #eef2f3;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* DODAJ TE 3 LINIE: */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spycha białą sekcję tekstową na sam dół */
 }
 
 .portfolio-item:hover {
@@ -43,30 +46,28 @@
 
 .portfolio-img {
   width: 100%;
-  height: 220px;
+  height: 400px; /* Przypisuje STAŁĄ wysokość dla wszystkich kafelków */
   overflow: hidden;
   background: #eceff1;
+  flex-shrink: 0; /* Zapobiega ściskaniu kontenera zdjęcia */
 }
 
-.portfolio-img img {
+.portfolio-img img,
+.portfolio-img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.portfolio-img a {
+  object-position: center center; /* Wymusza kadrowanie zawsze od samego ŚRODKA */
   display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.portfolio-item:hover .portfolio-img img {
-  transform: scale(1.05);
+  transition: transform 0.4s ease;
 }
 
 .portfolio-info {
   padding: 20px;
+  flex-grow: 1; /* Wypełnia pozostałą przestrzeń */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .portfolio-info h3 {
